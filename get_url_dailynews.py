@@ -21,7 +21,7 @@ random.seed(datetime.datetime.now())
 count = 0
 
 def store(URL): 
-    cur.execute("INSERT INTO dailynews_url_sports(URL) VALUES (\"%s\")", (URL)) #***edit categories: economic, education, entertainment, foreign, it, sports
+    cur.execute("INSERT INTO dailynews_url_education(URL) VALUES (\"%s\")", (URL)) #***edit categories: economic, education, entertainment, foreign, it, sports
     cur.connection.commit()
     
 def getLinks(genre,cnt):
@@ -54,4 +54,4 @@ def getLinks(genre,cnt):
         getLinks(genre,cnt)
             
 if __name__ == '__main__':
-    getLinks('sports',1) #***edit categories: economic, education, entertainment, foreign, it, sports
+    getLinks('education',1) #***edit categories: economic, education, entertainment, foreign, it, sports
