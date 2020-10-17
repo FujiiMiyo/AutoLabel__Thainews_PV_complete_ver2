@@ -19,19 +19,14 @@ from gensim.models import word2vec
 import json
 
 import nltk
+nltk.download('stopwords')
 from nltk.corpus import stopwords
-from nltk.corpus import wordnet
-from spellchecker import SpellChecker
 import re
 
 from pythainlp.util import isthai
 from pythainlp.util import num_to_thaiword
-from pythainlp.tokenize import dict_trie
 from pythainlp.corpus.common import thai_words
-from pythainlp.spell import NorvigSpellChecker
-from pythainlp.corpus import tnc
 
-from pythainlp.spell import *
 
 conn = pymysql.connect(host = 'localhost', user = 'root', passwd = None, db = 'news', charset = 'utf8')
 cur = conn.cursor()
@@ -269,12 +264,12 @@ class doc_labeling(object):
 if __name__ == '__main__':
         
     doclb = doc_labeling()
-    a = doclb.get_body_eco(2480) #*** 2,480 articles
-    b = doclb.get_body_edu(2480) #*** 2,480 articles
-    c = doclb.get_body_ent(2480) #*** 2,480 articles
-    d = doclb.get_body_fore(2480) #*** 2,480 articles
-    e = doclb.get_body_it(2480) #*** 2,480 articles
-    f = doclb.get_body_spo(2480) #*** 2,480 articles
+    a = doclb.get_body_eco(2480)   #*** 2,480 articles
+    b = doclb.get_body_edu(2480)    #*** 2,480 articles
+    c = doclb.get_body_ent(2480)    #*** 2,480 articles
+    d = doclb.get_body_fore(2480)  #*** 2,480 articles
+    e = doclb.get_body_it(2480)    #*** 2,480 articles
+    f = doclb.get_body_spo(2480)   #*** 2,480 articles
     
     
     
