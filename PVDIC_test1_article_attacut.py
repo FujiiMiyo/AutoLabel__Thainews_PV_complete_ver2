@@ -9,7 +9,7 @@ import numpy as np
 import pymysql
 import pandas as pd
 #import NLPS as nlp
-from pythainlp.tokenize import word_tokenize, Tokenizer
+from pythainlp.tokenize import word_tokenize
 from pythainlp.corpus import common
 from pandas import Series,DataFrame
 #import time
@@ -18,15 +18,13 @@ from gensim import corpora,matutils
 from gensim.models import word2vec
 import json
 
-from pythainlp.spell import *
-from pythainlp.util import bahttext
 import nltk
+nltk.download('stopwords')
 from nltk.corpus import stopwords
-from nltk.corpus import wordnet
 import re
+
 from pythainlp.util import isthai
 from pythainlp.util import num_to_thaiword
-from pythainlp.tokenize import dict_trie
 from pythainlp.corpus.common import thai_words
 
 
@@ -307,3 +305,4 @@ if __name__ == '__main__':
     
     n_sent = len(all_list_vec)
     print(n_sent)
+    
