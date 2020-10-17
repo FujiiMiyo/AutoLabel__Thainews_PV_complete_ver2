@@ -21,7 +21,7 @@ random.seed(datetime.datetime.now())
 count = 0
 
 def store(URL): 
-    cur.execute("INSERT INTO siamrath_url_sports(URL) VALUES (\"%s\")", (URL)) #***edit categories: economic, education, entertainment, foreign, it, sports
+    cur.execute("INSERT INTO siamrath_url_foreign_test(URL) VALUES (\"%s\")", (URL)) #***edit categories: economic, education, entertainment, foreign, it, sports
     cur.connection.commit()
     
 def getLinks(genre,cnt):
@@ -48,13 +48,13 @@ def getLinks(genre,cnt):
             except Exception:
                 continue'''
     
-    if cnt < 19: #*** 0 to 19 (last page = 8 articles) = 20 pages -> Date: 20200401
+    if cnt < 50: #*** 0 to 19 (last page = 8 articles) = 20 pages -> Date: 20200401
         cnt+=1
         print(cnt)
         getLinks(genre,cnt)
             
 if __name__ == '__main__':
-    getLinks('sports',0) #***edit categories: sports [0 to 18] = 19 pages -> Date: 20200330   
+    getLinks('world',0) #***edit categories: sports [0 to 18] = 19 pages -> Date: 20200330   
     
     #***edit categories: economy, education, entertainment, world, it(technology/space/automobile), sports
     # 1 page = 24 articles
