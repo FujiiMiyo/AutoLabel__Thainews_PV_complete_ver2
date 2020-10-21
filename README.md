@@ -1,3 +1,3 @@
-# AutoLabel__Thainews_PV_complete_ver2
+# Automatic Labeling for Thai News Article (version 2.0)
 
-The system can process for detecting similar words from the interested document. The group of words is called "Label".
+"Automatic Labeling for Thai News Article"  can process for detecting similar words from the interested document. The group of words is called "Label".
