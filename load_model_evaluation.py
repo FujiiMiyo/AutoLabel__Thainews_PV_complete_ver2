@@ -33,13 +33,13 @@ if __name__ == '__main__':
     sports = pd.read_csv('/Users/JJane/Anacondaprojects/AutoLabel__Thainews_PV_complete_ver2-main/AutoLabel__Thainews_PV_complete_ver2-main/news.sql (2)/sports_con.csv')
     #all_pd = pd.concat([economic,education,entertainment,foreign,it,sports],axis=1)
     #all_pd = pd.merge([economic,education,entertainment,foreign,it,sports])
-    all_pd = pd.concat([it,sports],axis=1)
+    all_pd = pd.concat([foreign,sports],axis=1)
     print(all_pd.columns)
     
     ####### Load model ########
     model = models.doc2vec.Doc2Vec(alpha=0.025, min_alpha=0.025)  # use fixed learning rate
-    model_loaded_deepcut = models.doc2vec.Doc2Vec.load('model_deepcut_test1')
-    model_loaded_attacut = models.doc2vec.Doc2Vec.load('model_attacut_test1')
+    model_loaded_deepcut = models.doc2vec.Doc2Vec.load('model_deepcut_test1_3.bin')
+    model_loaded_attacut = models.doc2vec.Doc2Vec.load('model_attacut_test1_3.bin')
     
     ####### Create lists of labels and vectors ########
     all_label_vec_deepcut = []
@@ -84,7 +84,7 @@ if __name__ == '__main__':
         all_label_vec_attacut.append(0)
         cnt_ent += 1'''
         
-    '''cnt_fore = 0
+    cnt_fore = 0
     for i in all_pd['foreign'].values:
         fore_vec_deepcut = model_loaded_deepcut.docvecs['foreign_%s' %(cnt_fore)]
         fore_vec_attacut = model_loaded_attacut.docvecs['foreign_%s' %(cnt_fore)]
@@ -94,9 +94,9 @@ if __name__ == '__main__':
         all_label_vec_deepcut.append(0)
         all_list_attacut.append(fore_vec_attacut)
         all_label_vec_attacut.append(0)
-        cnt_fore += 1'''
+        cnt_fore += 1
         
-    cnt_it = 0
+    '''cnt_it = 0
     for i in all_pd['it'].values:
         it_vec_deepcut = model_loaded_deepcut.docvecs['it_%s' %(cnt_it)]
         it_vec_attacut = model_loaded_attacut.docvecs['it_%s' %(cnt_it)]
@@ -106,7 +106,7 @@ if __name__ == '__main__':
         all_label_vec_deepcut.append(0)
         all_list_attacut.append(it_vec_attacut)
         all_label_vec_attacut.append(0)
-        cnt_it += 1
+        cnt_it += 1'''
         
     cnt_spo = 0
     for i in all_pd['sports'].values:
@@ -136,8 +136,8 @@ if __name__ == '__main__':
     #estimator = SVC(kernel='linear', C=0.01)
     #target = ['economic','education','entertainment','foreign','it','sports']
     #target1 = ['eco','edu','ent','fore','it','spo']
-    target = ['it','sports']
-    target1 = ['it','spo']
+    target = ['foreign','sports']
+    target1 = ['fore','spo']
     
     titles_options = [("Confusion matrix, without normalization", None),
                   ("Normalized confusion matrix", 'true')]
