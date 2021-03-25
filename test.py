@@ -30,6 +30,9 @@ print ("newmm = ", e)
 print ("deepcut = ", g)
 
 
+translator = google_translator()
+th = translator.translate('PropTech',lang_src='en',lang_tgt='th')
+print("Translation = ", th)
 
 
 ##### Check spell #####
