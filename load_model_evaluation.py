@@ -23,7 +23,7 @@ from sklearn.metrics import plot_confusion_matrix
 
 if __name__ == '__main__':
     
-    #C:\Users\RIKO\AnacondaProjects\AutoLabel_by_PV_newswebsite_ver2\DB
+    #C:\Users\USER\AnacondaProjects\AutoLabel_by_PV_newswebsite_ver2\DB
     ####### Get data from CSV ########
     economic = pd.read_csv('/Users/USER/Anacondaprojects/AutoLabel__Thainews_PV_complete_ver2-main/AutoLabel__Thainews_PV_complete_ver2-main/news.sql (2)/economic_con.csv')
     education = pd.read_csv('/Users/USER/Anacondaprojects/AutoLabel__Thainews_PV_complete_ver2-main/AutoLabel__Thainews_PV_complete_ver2-main/news.sql (2)/education_con.csv')
