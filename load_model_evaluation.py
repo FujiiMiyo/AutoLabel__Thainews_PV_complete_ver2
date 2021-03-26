@@ -25,12 +25,12 @@ if __name__ == '__main__':
     
     #C:\Users\RIKO\AnacondaProjects\AutoLabel_by_PV_newswebsite_ver2\DB
     ####### Get data from CSV ########
-    economic = pd.read_csv('/Users/JJane/Anacondaprojects/AutoLabel__Thainews_PV_complete_ver2-main/AutoLabel__Thainews_PV_complete_ver2-main/news.sql (2)/economic_con.csv')
-    education = pd.read_csv('/Users/JJane/Anacondaprojects/AutoLabel__Thainews_PV_complete_ver2-main/AutoLabel__Thainews_PV_complete_ver2-main/news.sql (2)/education_con.csv')
-    entertainment = pd.read_csv('/Users/JJane/Anacondaprojects/AutoLabel__Thainews_PV_complete_ver2-main/AutoLabel__Thainews_PV_complete_ver2-main/news.sql (2)/entertainment_con.csv')
-    foreign = pd.read_csv('/Users/JJane/Anacondaprojects/AutoLabel__Thainews_PV_complete_ver2-main/AutoLabel__Thainews_PV_complete_ver2-main/news.sql (2)/foreign_con.csv')
-    it = pd.read_csv('/Users/JJane/Anacondaprojects/AutoLabel__Thainews_PV_complete_ver2-main/AutoLabel__Thainews_PV_complete_ver2-main/news.sql (2)/it_con.csv')
-    sports = pd.read_csv('/Users/JJane/Anacondaprojects/AutoLabel__Thainews_PV_complete_ver2-main/AutoLabel__Thainews_PV_complete_ver2-main/news.sql (2)/sports_con.csv')
+    economic = pd.read_csv('/Users/USER/Anacondaprojects/AutoLabel__Thainews_PV_complete_ver2-main/AutoLabel__Thainews_PV_complete_ver2-main/news.sql (2)/economic_con.csv')
+    education = pd.read_csv('/Users/USER/Anacondaprojects/AutoLabel__Thainews_PV_complete_ver2-main/AutoLabel__Thainews_PV_complete_ver2-main/news.sql (2)/education_con.csv')
+    entertainment = pd.read_csv('/Users/USER/Anacondaprojects/AutoLabel__Thainews_PV_complete_ver2-main/AutoLabel__Thainews_PV_complete_ver2-main/news.sql (2)/entertainment_con.csv')
+    foreign = pd.read_csv('/Users/USER/Anacondaprojects/AutoLabel__Thainews_PV_complete_ver2-main/AutoLabel__Thainews_PV_complete_ver2-main/news.sql (2)/foreign_con.csv')
+    it = pd.read_csv('/Users/USER/Anacondaprojects/AutoLabel__Thainews_PV_complete_ver2-main/AutoLabel__Thainews_PV_complete_ver2-main/news.sql (2)/it_con.csv')
+    sports = pd.read_csv('/Users/USER/Anacondaprojects/AutoLabel__Thainews_PV_complete_ver2-main/AutoLabel__Thainews_PV_complete_ver2-main/news.sql (2)/sports_con.csv')
     #all_pd = pd.concat([economic,education,entertainment,foreign,it,sports],axis=1)
     #all_pd = pd.merge([economic,education,entertainment,foreign,it,sports])
     all_pd = pd.concat([foreign,sports],axis=1)
