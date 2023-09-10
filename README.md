@@ -1,3 +1,4 @@
 # Automatic Labeling for Thai News Article (version 2.0) - Completed version
 
-The system can process for searching similar words from the interested news articles. The group of words is called "Label".
+The program will search a group of words, which is similar meaning, according to a target news article and similar news articles. 
+The group of words is called "Label" as Keywords of the target news article.
